@@ -1,0 +1,30 @@
+Prctical 01:
+
+Javac *.java
+rmic Hello
+rmiregistry 
+
+Java HelloServer
+
+Java HelloClient
+
+
+Practical 02:
+
+../../
+
+Pl-03:
+
+mpicc sum_array_mpi.c-0 obj
+mpirun -np 5 ./obj
+
+
+pl-04
+
+g++ file_name.cpp
+./a.out
+
+pl-5 And pl-6
+
+javac file_name .java
+java file_name
