@@ -1,0 +1,49 @@
+1) using rmi
+window 1: javac *.java
+rmic Hello
+rmiregistry
+
+window 2:java HelloServer
+window 3:java HelloClient
+
+-----------------------------------------------------------------------------------
+2) CORBA
+window 1: idlj fall CalcApp.idl
+javac *.java CalcApp/*.java
+orbd -ORBInitialPort 1050&
+java CalcServer -ORBInitialPort 1050 -ORBInitialHost localhost&
+
+window 2: java CalcClient -ORBInitialPort 1050 -ORBInitialHost localhost
+
+------------------------------------------------------------------------------------
+
+3) mpi
+mpicc sum_array_mpi.c -o obj
+mpirun -np 5 ./obj
+
+------------------------------------------------------------------------------------
+
+4)berkeley clock sync
+
+window 1: g++ server.cpp
+./a.out
+
+window 2: g++ client.cpp
+./a.out
+
+--------------------------------------------------------------------------------------
+5) token ring algo
+
+javac tokenring.java
+java tokenring
+
+--------------------------------------------------------------------------------------
+
+6)bully and ring algo
+
+javac Bully.java
+java Bully
+
+javac Ring.java
+java Ring
+
